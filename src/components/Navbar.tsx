@@ -18,15 +18,15 @@ const Navbar = async (props: Props) => {
           </p>
         </Link>
         <div className="flex items-center">
-          <Link href="/gallery" className="mr-3">
+          <Link href="/gallery" className="mr-4">
             Gallery
           </Link>
           {session?.user && (
             <>
-              <Link href="/create" className="mr-3">
+              <Link href="/create" className="mr-4">
                 Create Course
               </Link>
-              <Link href="/settings" className="mr-3">
+              <Link href="/settings" className="mr-4">
                 Settings
               </Link>
             </>
