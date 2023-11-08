@@ -6,10 +6,12 @@ import { Button } from "./ui/button";
 import { Zap } from "lucide-react";
 import { set } from "zod";
 import axios from "axios";
+import { useToast } from "./ui/use-toast";
 
 type Props = {};
 
 const SubscriptionAction = (props: Props) => {
+  const { toast } = useToast();
   const { data } = useSession();
   const [loading, setLoading] = React.useState(false);
   const handleSubscribe = async () => {
@@ -31,8 +33,13 @@ const SubscriptionAction = (props: Props) => {
         value={data?.user.credits ? (data.user.credits / 10) * 100 : 0}
       />
       <Button
-        disabled={true}
-        onClick={handleSubscribe}
+        disabled={false}
+        onClick={() =>
+          toast({
+            title: "Sorry, this feature is currently unavailable!",
+            variant: "destructive",
+          })
+        }
         className="mt-3 font-bold text-white bg-gradient-to-r from-pink-500 to-rose-500 transition duration-300 ease-in-out hover:scale-110"
       >
         Urgrade
