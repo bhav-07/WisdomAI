@@ -31,7 +31,7 @@ const SubscriptionAction = (props: Props) => {
         value={data?.user.credits ? (data.user.credits / 10) * 100 : 0}
       />
       <Button
-        disabled={loading}
+        disabled={true}
         onClick={handleSubscribe}
         className="mt-3 font-bold text-white bg-gradient-to-r from-pink-500 to-rose-500 transition duration-300 ease-in-out hover:scale-110"
       >
