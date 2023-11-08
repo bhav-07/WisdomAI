@@ -4,6 +4,7 @@ import SignInButton from "./SignInButton";
 import { getAuthSession } from "@/lib/auth";
 import UserAccountNav from "./UserAccountNav";
 import { ThemeToggle } from "./ThemeToggle";
+import { Github } from "lucide-react";
 
 type Props = {};
 
@@ -18,6 +19,9 @@ const Navbar = async (props: Props) => {
           </p>
         </Link>
         <div className="flex items-center">
+          <Link href="https://github.com/bhav-07/WisdomAI">
+            <Github className="w-6 h-6 mr-4" />
+          </Link>
           <Link href="/gallery" className="mr-4">
             Gallery
           </Link>
