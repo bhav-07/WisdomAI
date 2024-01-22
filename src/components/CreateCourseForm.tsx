@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "./ui/input";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
-import { Plus, Trash } from "lucide-react";
+import { Loader2, Plus, Trash } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
@@ -50,23 +50,28 @@ const CreateCourseForm = (props: Props) => {
       });
       return;
     }
-    createChapters(data, {
-      onSuccess: ({ course_id }) => {
-        toast({
-          title: "Success",
-          description: "Course created successfully",
-        });
-        router.push(`/create/${course_id}`);
-      },
-      onError: (error) => {
-        console.log(error);
-        toast({
-          title: "Error",
-          description: "Something went wrong",
-          variant: "destructive",
-        });
-      },
+    toast({
+      title: "Error!",
+      description: "Sorry this features is not supported anymore😔",
+      variant: "destructive",
     });
+    // createChapters(data, {
+    //   onSuccess: ({ course_id }) => {
+    //     toast({
+    //       title: "Success",
+    //       description: "Course created successfully",
+    //     });
+    //     router.push(`/create/${course_id}`);
+    //   },
+    //   onError: (error) => {
+    //     console.log(error);
+    //     toast({
+    //       title: "Error",
+    //       description: "Something went wrong",
+    //       variant: "destructive",
+    //     });
+    //   },
+    // });
   }
 
   form.watch();
@@ -163,6 +168,13 @@ const CreateCourseForm = (props: Props) => {
             type="submit"
             className="w-full mt-6"
             size="lg"
+            onClick={() => {
+              toast({
+                title: "Creating course",
+                description: "This May take upto 30 seconds",
+                variant: "default",
+              });
+            }}
           >
             Create!
           </Button>
