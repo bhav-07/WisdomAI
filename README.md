@@ -43,7 +43,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Demo
 ### Home Page-
 ![Screenshot (201)](https://github.com/bhav-07/WisdomAI/assets/97280556/2ac1100c-bcce-406e-b214-b77cd92a0b45)
-![Screenshot (203)](https://github.com/bhav-07/WisdomAI/assets/97280556/50c0f640-22a5-4bc7-a1f4-acbfec5e3225)
 
 ### Gallery Page-
 ![Screenshot (202)](https://github.com/bhav-07/WisdomAI/assets/97280556/5e9ead3b-55d6-41b1-8954-5810d4f16c56)
